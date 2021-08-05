@@ -47,7 +47,8 @@ git init  (初始化git项目，已经初始化过的无需执行)
 git remote add origin 远程仓库地址
 git add . （添加项目所有文件）
 git commit -m '项目初始化'
-git pull origin master
+git pull origin master 
+(pull如果报错可尝试此命令解决 git pull origin master --allow-unrelated-histories)
 git push origin master
 ```
 
