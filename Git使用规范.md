@@ -31,8 +31,8 @@
 
 ```
 示例：
-(单种修改类型) feature: 1.新增xxx功能  2.新增yyy功能
-(多种修改类型) feature + update: 1.新增xxx功能  2.更改xx模块样式
+(单种修改类型) feat: 1.新增xxx功能  2.新增yyy功能
+(多种修改类型) feat + update: 1.新增xxx功能  2.更改xx模块样式
 ```
 
 
