@@ -56,17 +56,17 @@ git push origin master
 场景：当前分支修改了部分文件但未修改完成，临时有紧急情况，需要在当前分支进行其他模块修改并提交。此时，可以使用贮藏功能将改动的文件存储到临时空间，将本分支还原到修改之前。
 
 ```
-1.git stash save "当前存储的变动描述" : 执行存储时，添加备注 (执行存储后，会把改动文件从当前分支中还原)
+git stash save "当前存储的变动描述" : 执行存储时，添加备注 (执行存储后，会把改动文件从当前分支中还原)
 
-2.git stash list : 查看stash列表
+git stash list : 查看stash列表
 
-3.git stash apply : 应用某个存储,但不会把存储从存储列表中删除，默认使用第一个存储,即stash@{0}，如果要使用其他个，git stash apply stash@{$num} ， 比如第二个：git stash apply stash@{1} 
+git stash apply : 应用某个存储,但不会把存储从存储列表中删除，默认使用第一个存储,即stash@{0}，如果要使用其他个，git stash apply stash@{$num} ， 比如第二个：git stash apply stash@{1} 
 
-4.git stash pop : 命令恢复之前缓存的工作目录，将缓存堆栈中的对应stash删除，并将对应修改应用到当前的工作目录下,默认为第一个stash,即stash@{0}，如果要应用并删除其他stash，命令：git stash pop stash@{$num} ，比如应用并删除第二个：git stash pop stash@{1}
+git stash pop : 恢复之前缓存的stash，将缓存堆栈中的对应stash删除，并将对应修改应用到当前的工作目录下,默认为第一个stash,即stash@{0}，如果要应用并删除其他stash，命令：git stash pop stash@{$num} ，比如应用并删除第二个：git stash pop stash@{1}
 
-5.git stash drop stash@{$num} : 丢弃stash@{$num}存储，从列表中删除这个存储
+git stash drop stash@{$num} : 丢弃stash@{$num}存储，从列表中删除这个存储
 
-6.git stash clear : 删除所有缓存的stash
+git stash clear : 删除所有缓存的stash
 ```
 
 ### 3.版本回滚
